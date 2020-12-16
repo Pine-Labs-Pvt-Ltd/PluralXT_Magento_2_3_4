@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+                <pluralxtpaymentmethod>
+                <active>1</active>
+                <title>Plural XT by Pine Labs</title>
+                <order_status>pending_payment</order_status>
+                <instructions>Instruction.</instructions>
+                <payment_action>true</payment_action>
+                <model>PinelabsLtd\PluralXTGateway\Model\PluralXTPaymentMethod</model>
+                <group>offline</group>
+				
+                <redirect_url>pluralxt/standard/redirect</redirect_url>
+                <return_url>pluralxt/standard/response</return_url>
+                <cancel_url>pluralxt/standard/cancel</cancel_url>
+				<production_url>https://paymentoptimizer.pinepg.in</production_url>
+                <sandbox_url>https://paymentoptimizertest.pinepg.in</sandbox_url>
+  
+            </pluralxtpaymentmethod>
+            <!-- payment-config -->
+        </payment>
+    </default>
+</config>
