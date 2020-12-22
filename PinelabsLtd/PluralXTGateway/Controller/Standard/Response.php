@@ -48,7 +48,7 @@ class Response extends \PinelabsLtd\PluralXTGateway\Controller\PluralXTAbstract 
                 // $paymentMethod->postProcessing($order, $payment, $params);
 				
 				$returnUrl = $this->getCheckoutHelper()->getUrl('checkout/onepage/success');
-				
+				$logger->info('Success Page URL is '.$returnUrl);
 				try {
 					$orderSender=$objectManager->create('Magento\Sales\Model\Order\Email\Sender\OrderSender');
 					$orderSender->send($order);
